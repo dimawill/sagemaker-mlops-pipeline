@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="460" viewBox="0 0 900 460" role="img" aria-labelledby="title desc">
+  <title id="title">SageMaker demand forecasting MLOps pipeline</title>
+  <desc id="desc">S3 input to Step Functions prep, XGBoost training, batch evaluation, RMSE gate, model registry, optional batch inference and endpoint off by default</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#101d34"/><stop offset="1" stop-color="#152f49"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#83c9e6"/></marker>
+  </defs>
+  <rect width="900" height="460" rx="24" fill="url(#bg)"/>
+  <text x="42" y="55" fill="#e9f4ff" font-family="Arial, sans-serif" font-size="26" font-weight="700">Demand Forecasting · SageMaker MLOps</text>
+  <text x="42" y="84" fill="#a8c4d9" font-family="Arial, sans-serif" font-size="14">Synthetic data · held-out RMSE gate · explicit cost controls</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle" font-size="16" font-weight="600">
+    <rect x="43" y="139" width="145" height="78" rx="13" fill="#1c5171" stroke="#4bb6e2"/><text x="116" y="172" fill="white">S3 input</text><text x="116" y="195" fill="#b9e8fb" font-size="12">synthetic CSV</text>
+    <rect x="228" y="139" width="145" height="78" rx="13" fill="#1c5171" stroke="#4bb6e2"/><text x="300" y="172" fill="white">Lambda prep</text><text x="300" y="195" fill="#b9e8fb" font-size="12">chronological split</text>
+    <rect x="413" y="139" width="145" height="78" rx="13" fill="#1c5171" stroke="#4bb6e2"/><text x="485" y="172" fill="white">SageMaker</text><text x="485" y="195" fill="#b9e8fb" font-size="12">XGBoost train</text>
+    <rect x="598" y="139" width="145" height="78" rx="13" fill="#1c5171" stroke="#4bb6e2"/><text x="670" y="172" fill="white">Batch eval</text><text x="670" y="195" fill="#b9e8fb" font-size="12">held-out test</text>
+    <rect x="743" y="260" width="115" height="78" rx="13" fill="#246956" stroke="#7de0ac"/><text x="800" y="292" fill="white">RMSE gate</text><text x="800" y="315" fill="#c8f8dc" font-size="12">≤ 15</text>
+    <rect x="509" y="260" width="172" height="78" rx="13" fill="#246956" stroke="#7de0ac"/><text x="595" y="293" fill="white">Model Registry</text><text x="595" y="316" fill="#c8f8dc" font-size="12">approved version</text>
+    <rect x="285" y="260" width="172" height="78" rx="13" fill="#374c72" stroke="#bca9ef"/><text x="371" y="293" fill="white">Batch inference</text><text x="371" y="316" fill="#ded5f9" font-size="12">execution opt-in</text>
+    <rect x="43" y="260" width="190" height="78" rx="13" fill="#514361" stroke="#dbb8dc"/><text x="138" y="293" fill="white">Real-time endpoint</text><text x="138" y="316" fill="#f9d9e7" font-size="12">CDK flag OFF by default</text>
+  </g>
+  <g fill="none" stroke="#83c9e6" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M188 178 H225"/><path d="M373 178 H410"/><path d="M558 178 H595"/><path d="M743 178 H800 V257"/><path d="M743 299 H684"/><path d="M509 299 H460"/><path d="M285 299 H236"/>
+  </g>
+  <text x="42" y="407" fill="#a8c4d9" font-family="Arial, sans-serif" font-size="14">Step Functions orchestration · CloudWatch alarms · private encrypted artifacts</text>
+</svg>
