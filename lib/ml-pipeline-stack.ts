@@ -30,7 +30,7 @@ export class MlPipelineStack extends cdk.Stack {
     const artifacts = bucket('ArtifactBucket');
     const imageUri = new cdk.CfnParameter(this, 'XgboostImageUri', {
       type: 'String', description: 'Region-specific SageMaker XGBoost 3.0-5 algorithm container URI (resolve with SageMaker image_uris.retrieve)',
-      allowedPattern: '[0-9]+\.dkr\.ecr\.[a-z0-9-]+\.amazonaws\.com(\.cn)?/[^ ]+',
+      allowedPattern: '[0-9]+\\.dkr\\.ecr\\.[a-z0-9-]+\\.amazonaws\\.com(\\.cn)?/[^ ]+',
     });
     const group = new sm.CfnModelPackageGroup(this, 'ModelGroup', {
       modelPackageGroupName: `demand-forecast-${props.stage}`,
